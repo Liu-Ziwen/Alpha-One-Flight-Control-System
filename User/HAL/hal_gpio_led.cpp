@@ -35,6 +35,10 @@ void HAL_GPIO_LED::init(void)
 	off(LED_BLUE);
 	off(LED_GREEN);
 	off(LED_RED);
+	
+	on(LED_BLUE);
+	on(LED_GREEN);
+	on(LED_RED);
 }
 
 void HAL_GPIO_LED::off(uint8_t number)
@@ -191,7 +195,7 @@ void HAL_GPIO_LED::update_color(uint8_t mode)
 				case 0:case 1:case 2:case 3:case 4:case 5:case 6:case 7:case 8:case 9:
 					control(GREEN);break;
 			}break;		
-		case 10:	//红灯闪烁//陀螺仪零偏校准不成功
+		case 10://红灯闪烁//陀螺仪零偏校准不成功
 			switch(status)
 			{
 				case 0:case 1:case 2:case 3:case 4:case 5:case 6:case 7:case 8:case 9:

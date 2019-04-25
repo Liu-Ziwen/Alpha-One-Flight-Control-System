@@ -13,21 +13,21 @@
 class HAL_SYSTICK
 {
 public:
-	/* HAL_SysTick */
+	//hal_systick
 	void init(void);
-	/* TimeStamp */
+	//time_stamp
 	uint32_t millis(void);
 	uint32_t micros(void);
-	/* Delay */
+	//delay
 	void us(uint32_t delay_us);
 	void ms(uint32_t delay_ms);
 private:
-	/* TimeStamp */
+	//time_stamp
 	uint32_t ms_cnt;
 	uint32_t systick_cycle;
-	/* Delay */
+	//delay
 	uint32_t time_now;
-	/* HAL_SysTick */
+	//hal_systick
 	void get_usticks(void);
 };
 extern HAL_SYSTICK hal_systick;

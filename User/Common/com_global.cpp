@@ -13,11 +13,11 @@ GPS_SensorData_Structer Gps_Data;
 
 
 /* COM串口DMA收发缓冲区--------------------------------------------------------------------------------------------------- */
-uint8_t COM4_Tx_Buffer[COM4_TX_BUFFER_SIZE];
-uint8_t COM4_Rx_Buffer[COM4_RX_BUFFER_SIZE];
+//uint8_t COM4_Tx_Buffer[COM4_TX_BUFFER_SIZE];
+//uint8_t COM4_Rx_Buffer[COM4_RX_BUFFER_SIZE];
 
-uint8_t COM1_Tx_Buffer[COM1_TX_BUFFER_SIZE];
-uint8_t COM1_Rx_Buffer[COM1_RX_BUFFER_SIZE];
+//uint8_t COM1_Tx_Buffer[COM1_TX_BUFFER_SIZE];
+//uint8_t COM1_Rx_Buffer[COM1_RX_BUFFER_SIZE];
 
 
 

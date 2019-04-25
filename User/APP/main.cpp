@@ -36,16 +36,25 @@ uint16_t test_dtime_2hz;
 
 int main(void)
 {
-	/* HAL */
+	//HAL
 	hal_systick.init();
 	hal_rgb.init();
 	hal_spi.init(SPI_BaudRatePrescaler_4);
 	hal_i2c.init();
+	hal_uart.init();
 
+	//BSP
 	ms5611.init();
 	mpu6k.init_with_check();
 	hmc5883l.init_with_check();
+	ublox_m8n.init();
+	
+	
+	//Test
+	test_flag=optical_flow_module.init();
 
+	delay.ms(1000);	//上电白色灯亮起
+	
 	while(1)
 	{
 		if(time_stamp.micros() - timer_2p5ms >= 2500)
@@ -65,6 +74,7 @@ int main(void)
 			
 			loop_timer_400hz = 0;
 			mpu6k.update();
+			fml_ano.exchange();
 			test_time_now = time_stamp.micros();		///////////////////////////////
 			test_dtime_400hz = test_time_now - test_time_last;/////////////////////////
 		}
@@ -74,8 +84,9 @@ int main(void)
 			test_time_last = time_stamp.micros();		///////////////////////////////
 			
 			loop_timer_200hz = 0;
-			hmc5883l.update();		//I2C，读一次45us
-
+			hmc5883l.update();		//I2C，读一次67us(I2C速度最高1.4M，否则无法初始化)
+																//I2C，读一次211us(正常400K速率)
+			
 			test_time_now = time_stamp.micros();		///////////////////////////////
 			test_dtime_200hz = test_time_now - test_time_last;/////////////////////////
 		}
@@ -110,7 +121,7 @@ int main(void)
 		if(loop_timer_5hz>=80)
 		{
 			test_time_last = time_stamp.micros();		///////////////////////////////
-			
+//			hal_uart.com4_send_cmd();//测试：光流初始化发送命令
 			loop_timer_5hz = 0;
 //			hal_rgb.update_color(9);
 			
@@ -123,6 +134,7 @@ int main(void)
 			
 			loop_timer_2hz = 0;
 			hal_rgb.update_color(9);
+			
 			
 			test_time_now = time_stamp.micros();		///////////////////////////////
 			test_dtime_2hz = test_time_now - test_time_last;/////////////////////////

@@ -19,28 +19,33 @@
 #include <math.h>
 
 /* Common Functions and Variables -----------*/
+#include "com_test.h"//”√”⁄≤‚ ‘
+#include "com_defines.h"
 #include "com_math.h"
 #include "com_global.h"
+#include "com_buffer.h"
 
 /* Hardware Abstract Layer ------------------*/
 #include "hal_systick.h"
 #include "hal_gpio_led.h"
-//#include "hal_timer_pwm.h"
-//#include "hal_exti_cap.h"
+#include "hal_timer_pwm.h"
+#include "hal_timer_cap.h"
 #include "hal_spi.h"
 #include "hal_i2c.h"
-//#include "hal_uart.h"
-//#include "hal_dma.h"
+#include "hal_uart.h"
+#include "hal_dma.h"
 
 /* Board Support Package --------------------*/
 #include "bsp_ms5611.h"
 #include "bsp_mpu6k.h"
 #include "bsp_hmc5883l.h"
-//#include "bsp_ublox.h"
+#include "bsp_ubloxm8n.h"
+#include "bsp_lc306.h"//optical flow module
 
 /* Framework Module Libraries ---------------*/
 //#include "fml_com_protocol.h"
-//#include "fml_ano_protocol.h"
+#include "fml_ano_protocol.h"
+#include "fml_gps.h"
 
 /* Applications -----------------------------*/
 

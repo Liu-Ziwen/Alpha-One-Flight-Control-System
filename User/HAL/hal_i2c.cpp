@@ -23,7 +23,7 @@ void HAL_I2C::init(void)
 		
 	GPIO_InitStructure.GPIO_Pin =GPIO_Pin_10|GPIO_Pin_11;
 	GPIO_InitStructure.GPIO_Mode =  GPIO_Mode_AF;
-	GPIO_InitStructure.GPIO_OType = GPIO_OType_OD;
+	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	GPIO_Init(GPIOB, &GPIO_InitStructure);
@@ -33,7 +33,7 @@ void HAL_I2C::init(void)
 	I2C_InitStructure.I2C_Mode=I2C_Mode_I2C;
 	I2C_InitStructure.I2C_Ack=I2C_Ack_Enable;
 	I2C_InitStructure.I2C_AcknowledgedAddress=I2C_AcknowledgedAddress_7bit;
-	I2C_InitStructure.I2C_ClockSpeed=800000;
+	I2C_InitStructure.I2C_ClockSpeed=400000; 
 	I2C_InitStructure.I2C_DutyCycle=I2C_DutyCycle_2;
 	I2C_Init(I2C2, &I2C_InitStructure);   
 	

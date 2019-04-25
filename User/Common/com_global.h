@@ -58,17 +58,17 @@ extern GPS_SensorData_Structer Gps_Data;
 
 
 /* COM串口DMA收发缓冲区--------------------------------------------------------------------------------------------------- */
-#define COM4_TX_BUFFER_SIZE 	100	//串口4发送数据长度(数传和地面站)
-#define COM4_RX_BUFFER_SIZE 	50	//串口4接收数据长度
+//#define COM4_TX_BUFFER_SIZE 	100	//串口4发送数据长度(数传和地面站)
+//#define COM4_RX_BUFFER_SIZE 	50	//串口4接收数据长度
 
-#define COM1_TX_BUFFER_SIZE 	50	//串口1发送数据长度(GPS)
-#define COM1_RX_BUFFER_SIZE 	1	//串口1接收数据长度
+//#define COM1_TX_BUFFER_SIZE 	50	//串口1发送数据长度(GPS)
+//#define COM1_RX_BUFFER_SIZE 	1	//串口1接收数据长度
 
-extern uint8_t COM4_Tx_Buffer[COM4_TX_BUFFER_SIZE];
-extern uint8_t COM4_Rx_Buffer[COM4_RX_BUFFER_SIZE];
+//extern uint8_t COM4_Tx_Buffer[COM4_TX_BUFFER_SIZE];
+//extern uint8_t COM4_Rx_Buffer[COM4_RX_BUFFER_SIZE];
 
-extern uint8_t COM1_Tx_Buffer[COM1_TX_BUFFER_SIZE];
-extern uint8_t COM1_Rx_Buffer[COM1_RX_BUFFER_SIZE];
+//extern uint8_t COM1_Tx_Buffer[COM1_TX_BUFFER_SIZE];
+//extern uint8_t COM1_Rx_Buffer[COM1_RX_BUFFER_SIZE];
 
 
 

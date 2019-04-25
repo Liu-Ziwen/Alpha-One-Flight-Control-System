@@ -447,6 +447,21 @@
               <FileType>8</FileType>
               <FilePath>..\User\Common\com_global.cpp</FilePath>
             </File>
+            <File>
+              <FileName>com_test.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\Common\com_test.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>com_buffer.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\Common\com_buffer.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>com_defines.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\User\Common\com_defines.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -471,6 +486,18 @@
         </Group>
         <Group>
           <GroupName>FML</GroupName>
+          <Files>
+            <File>
+              <FileName>fml_ano_protocol.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\FML\fml_ano_protocol.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>fml_gps.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\FML\fml_gps.cpp</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>BSP</GroupName>
@@ -489,6 +516,16 @@
               <FileName>bsp_hmc5883l.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>..\User\BSP\bsp_hmc5883l.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_lc306.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\BSP\bsp_lc306.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_ubloxm8n.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\BSP\bsp_ubloxm8n.cpp</FilePath>
             </File>
           </Files>
         </Group>
@@ -514,6 +551,26 @@
               <FileName>hal_i2c.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>..\User\HAL\hal_i2c.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>hal_uart.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\HAL\hal_uart.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>hal_timer_pwm.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\HAL\hal_timer_pwm.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>hal_timer_cap.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\HAL\hal_timer_cap.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>hal_dma.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\HAL\hal_dma.cpp</FilePath>
             </File>
           </Files>
         </Group>

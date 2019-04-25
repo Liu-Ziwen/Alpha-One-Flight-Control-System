@@ -24,7 +24,7 @@ void HAL_SPI::init(uint16_t baud)
 	GPIO_PinAFConfig(GPIOB,GPIO_PinSource5,GPIO_AF_SPI1); //SPI2_MOSI
 	//GPIO配置
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;	
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
 	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
@@ -36,7 +36,7 @@ void HAL_SPI::init(uint16_t baud)
 	SPI_InitStructure.SPI_CPOL = SPI_CPOL_Low;							//时钟上升沿采样数据
 	SPI_InitStructure.SPI_CPHA = SPI_CPHA_1Edge;						//时钟的第1个边沿采样数据
 	SPI_InitStructure.SPI_NSS = SPI_NSS_Soft;							//片选控制方式：软件控制
-	SPI_InitStructure.SPI_BaudRatePrescaler = baud;		//MS5611最高速：20MHz，可采用8分频(10.5MHz)
+	SPI_InitStructure.SPI_BaudRatePrescaler = baud;						//MS5611最高速：20MHz，可采用8分频(10.5MHz)
 	SPI_InitStructure.SPI_FirstBit = SPI_FirstBit_MSB;					//数据位传输次序；高位先传
 	SPI_InitStructure.SPI_CRCPolynomial = 7;							//CRC多项式寄存器，复位后为7。本工程不用
 	SPI_Init(SPI1, &SPI_InitStructure);
